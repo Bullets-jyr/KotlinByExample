@@ -2,7 +2,7 @@ fun main() {
     data class Person(var name: String, var age: Int, var about: String) {
         constructor() : this("", 0, "")
     }
-    val jake = Person().apply {
+    val jake: Person = Person().apply {
         name = "Jake"
         age = 30
         about = "안드로이드 개발자"
@@ -10,10 +10,10 @@ fun main() {
 
     println(jake.toString())
 
-    val stringDescription = jake.apply {                    // 2
+    val stringDescription: String = (jake.apply {                    // 2
         name = "Jake"                                       // 3
         age = 30
         about = "안드로이드 개발자"
-    }.toString()                                            // 4
+    }).toString()                                            // 4
     println(stringDescription)
 }
