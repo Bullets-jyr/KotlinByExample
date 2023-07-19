@@ -11,7 +11,7 @@ fun main(args: Array<String>) {
     val value4 = mapWithDefault.getValue("키2")                // 3
 
     println(mapWithDefault["키123"])
-    
+
     try {
         map.getValue("없는 키")                                 // 4
     } catch (e: NoSuchElementException) {
